@@ -1,0 +1,109 @@
+{
+  "env": {
+    "browser": true,
+    // Ativa as variáveis globais do navegador, como `window`, `document`, etc.
+    "es2021": true
+    // Define que o código usa a versão ECMAScript 2021, permitindo recursos dessa versão, como os operadores de encadeamento opcional e nullish coalescing.
+  },
+
+  "extends": [
+    "eslint:recommended",
+    // Habilita as regras recomendadas do ESLint, que ajudam a detectar erros comuns e boas práticas.
+    "plugin:react/recommended",
+    // Ativa as regras recomendadas para projetos React, garantindo boas práticas com JSX e componentes React.
+    "plugin:@typescript-eslint/recommended",
+    // Ativa as regras recomendadas para TypeScript, incluindo regras de verificação de tipos e melhores práticas para o uso do TypeScript.
+    "plugin:prettier/recommended"
+    // Integra o Prettier com o ESLint, fazendo com que as regras de formatação do Prettier sejam aplicadas automaticamente.
+  ],
+
+  "parser": "@typescript-eslint/parser",
+  // Define que o ESLint deve usar o parser do TypeScript para entender o código e suas peculiaridades.
+
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    // Usa a versão mais recente do ECMAScript, permitindo o uso de recursos mais novos como o operador de encadeamento opcional e outras melhorias.
+    "sourceType": "module"
+    // Especifica que o código usa módulos ES6 (import/export), permitindo que o ESLint analise corretamente a sintaxe de módulos.
+  },
+
+  "plugins": [
+    "react",
+    // Adiciona as regras do ESLint para projetos React, garantindo a conformidade com as boas práticas no uso do JSX e componentes.
+    "react-hooks",
+    // Adiciona regras específicas para o uso correto dos hooks do React, como `useState`, `useEffect`, etc.
+    "@typescript-eslint",
+    // Adiciona regras específicas para projetos TypeScript, incluindo verificação de tipos e boas práticas do TypeScript.
+    "prettier"
+    // Integra o Prettier ao ESLint para garantir que as regras de formatação do Prettier sejam seguidas.
+  ],
+
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    // Desativa a regra que exige que o React esteja em escopo para JSX. No React 17+, o `React` não é mais necessário em escopo para JSX.
+    "react-hooks/rules-of-hooks": "error",
+    // Garante que os hooks do React sejam usados corretamente. Qualquer violação dessa regra será marcada como erro.
+    "react-hooks/exhaustive-deps": "warn",
+    // Garante que todas as dependências necessárias sejam passadas para os hooks `useEffect`, `useCallback`, etc.
+    // Caso alguma dependência esteja faltando, será gerado um aviso.
+    "import/no-default-export": "warn",
+    // sinalize um erro sempre que um export default for usado.
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_" }
+    ],
+    // Em TypeScript, não permite variáveis não utilizadas, exceto aquelas que começam com um `_`, sendo comuns como variáveis ignoradas.
+    "filenames/match-regex": ["error", "^[a-z][a-zA-Z0-9]+$", true],
+    // Exige que os nomes de arquivos sigam a convenção de nomenclatura em camelCase e com a primeira letra em minúscula.
+    "camelcase": ["error", { "properties": "always" }],
+    // Garante que as propriedades de objetos e as variáveis sigam o estilo camelCase.
+    "no-restricted-exports": [
+      "error",
+      // Garante que qualquer violação dessa regra seja tratada como um erro.
+      {
+        "selector": "variableLike",
+        // Aplica a regra para variáveis e constantes (comportamento `variableLike`).
+        "format": ["camelCase"]
+        // Exige que variáveis e constantes usem o estilo de nomenclatura camelCase.
+      },
+      {
+        "selector": "typeLike",
+        // Aplica a regra para tipos, interfaces e aliases de tipos (comportamento `typeLike`).
+        "format": ["PascalCase"]
+        // Exige que os tipos usem o estilo de nomenclatura PascalCase.
+      },
+      {
+        "selector": "enumMember",
+        // Aplica a regra para membros de enums (comportamento `enumMember`).
+        "format": ["PascalCase"]
+        // Exige que os membros de enums usem o estilo de nomenclatura PascalCase.
+      },
+      {
+        "restrictDefaultExports": {
+          "direct": true,
+          // Impede a exportação padrão direta de variáveis ou funções.
+          "named": true,
+          // Impede a exportação de uma variável ou função como exportação nomeada, de forma que a exportação padrão seja evitada.
+          "defaultFrom": true
+          // Impede a importação de default de outros módulos.
+        }
+      }
+    ]
+  },
+
+  "overrides": [
+    {
+      "files": ["src/**"]
+    },
+    {
+      "files": ["plopfile.js"]
+    }
+  ],
+
+  "settings": {
+    "react": {
+      "version": "detect"
+      // Faz com que o ESLint detecte automaticamente a versão do React usada no projeto, garantindo que as regras do React sejam aplicadas corretamente.
+    }
+  }
+}
