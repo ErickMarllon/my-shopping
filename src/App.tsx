@@ -13,7 +13,7 @@ const queryClient = new QueryClient({
 
 function App() {
   return (
-    <QueryClientProvider client={}>
+    <QueryClientProvider>
       <RouterProvider router={router} />
     </QueryClientProvider>
   );
