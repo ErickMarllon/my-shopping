@@ -1,10 +1,10 @@
-import { Loading } from "@/components";
 import { Suspense } from "react";
 import { Container } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
 import "./styles.scss";
+import { Loading } from "../../components";
 
-const PrivateLayout = () => {
+function PrivateLayout() {
   return (
     <Container fluid id="private-layout">
       <div className="private-layout__container">
@@ -14,6 +14,6 @@ const PrivateLayout = () => {
       </div>
     </Container>
   );
-};
+}
 
 export { PrivateLayout };
