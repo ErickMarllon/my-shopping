@@ -85,10 +85,6 @@ export default [
           format: ["camelCase", "PascalCase"],
         },
         {
-          selector: "variableLike",
-          format: ["camelCase"],
-        },
-        {
           selector: "typeLike",
           format: ["PascalCase"],
         },
