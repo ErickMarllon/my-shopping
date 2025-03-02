@@ -19,5 +19,6 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 
-  "cSpell.language": "en, pt-br"
+  "cSpell.language": "en, pt-br",
+  "cSpell.words": ["plopfile", "popperjs", "typesync"]
 }
