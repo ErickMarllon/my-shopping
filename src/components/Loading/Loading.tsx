@@ -2,13 +2,13 @@ import { Modal, Spinner } from "react-bootstrap";
 import "./styles.scss";
 import { ILoadingProps } from "./types";
 
-const Loading = ({
+function Loading({
   variant = "info",
   animation = "border",
   customClass = "loading-global",
   helperText = "Carregando...",
   ...props
-}: ILoadingProps) => {
+}: ILoadingProps) {
   return (
     <Modal show={true} className={`${customClass}`}>
       <Modal.Body>
@@ -24,6 +24,6 @@ const Loading = ({
       </Modal.Body>
     </Modal>
   );
-};
+}
 
 export { Loading };
