@@ -1,0 +1,70 @@
+@use "../../global/variables.scss" as var;
+
+.toast-container {
+  display: flex;
+  width: 100%;
+  padding: 8px 0px 8px 8px;
+  align-items: flex-start;
+
+  & > svg {
+    margin: 3px 4px;
+    font-size: 24px;
+  }
+
+  .toast-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 8px;
+
+    .toast-title {
+      display: flex;
+
+      & > h3 {
+        padding-top: 4px;
+        margin: 0;
+        color: var(--theme-neutral-800, #404040);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+
+    .toast-body {
+      display: flex;
+      color: var(--theme-neutral-800, #404040);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+
+      & > p > strong {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.Toastify {
+  width: auto;
+  padding: 0;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+  button {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+  }
+  & > div {
+    padding: 0;
+    & > div {
+      padding: 0;
+      & > div {
+        padding: 0;
+      }
+    }
+  }
+}
