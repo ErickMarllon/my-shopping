@@ -1,3 +1,5 @@
-interface IFirstViewProps {}
+interface IFirstViewProps {
+  opa?: string;
+}
 
 export type { IFirstViewProps };
