@@ -11,6 +11,8 @@ const envSchema = z.object({
   VITE_API_URL_PREFIX: z.string(),
   VITE_APP_USE_MOCK: z.string().transform((str) => str === "true"),
   VITE_ENCRYPTION_SECRET_KEY: z.string(),
+  VITE_GOOGLE_ID_CLIENT: z.string(),
+  VITE_GOOGLE_SECRET_CLIENT: z.string(),
 });
 
 export type EnvVars = z.infer<typeof envSchema>;

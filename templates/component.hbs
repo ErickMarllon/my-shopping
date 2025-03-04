@@ -1,9 +1,15 @@
-import './styles.scss'; import { I{{pascalCase name}}Props } from'./types';
-function
-{{pascalCase name}}({}:I{{pascalCase name}}Props) { return (
+import './styles.scss';
+import { I{{pascalCase name}}Props } from'./types';
+
+
+function {{pascalCase name}}({defaultValue = "default"}:I{{pascalCase name}}Props) { 
+    
+    return (
 <div className="{{kebabCase name}}-container">
-  <h1>{{pascalCase name}} Component</h1>
+  <h1>{{pascalCase name}} Component {defaultValue}</h1>
 </div>
-); }; export {
-{{pascalCase name}}
-};
+  );
+}
+
+ export { {{pascalCase name}} };
+
