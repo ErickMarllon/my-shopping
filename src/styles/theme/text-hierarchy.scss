@@ -1,0 +1,289 @@
+@import "fonts.scss";
+@import "colors.scss";
+
+.heading {
+  &XLarge {
+    color: var(--primary, #0c0c0b);
+
+    /* Heading/Heading Xlarge */
+    font-family: fonts.$font02;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 116%; /* 55.68px */
+  }
+
+  &Large {
+    color: var(--primary, #0c0c0b);
+
+    /* Heading/Heading Xlarge */
+    font-family: fonts.$font02;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 116%; /* 55.68px */
+  }
+
+  &Medium {
+    color: var(--primary, #0c0c0b);
+
+    /* Heading/Heading Medium */
+    font-family: fonts.$font02;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%; /* 32.4px */
+  }
+
+  &Small {
+    color: var(--primary, #0c0c0b);
+
+    /* Heading/Heading Small */
+    font-family: fonts.$font02;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135%; /* 24.3px */
+  }
+  &XSmall {
+    color: var(--primary, #0c0c0b);
+
+    /* Heading/Heading XSmall */
+    font-family: fonts.$font02;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+  }
+
+  &XXSmall {
+    color: var(--primary, #0c0c0b);
+
+    /* Heading/Heading XXSmall */
+    font-family: fonts.$font02;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 115%; /* 16.1px */
+  }
+}
+
+.body {
+  &XLarge {
+    color: var(--primary, #0c0c0b);
+
+    /* Body/Body XLarge/Regular */
+    font-family: fonts.$font01;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%; /* 24.3px */
+    &-b {
+      font-weight: 600;
+    }
+  }
+  &Large {
+    color: var(--primary, #0c0c0b);
+
+    /* Body/Body Large/Regular */
+    font-family: fonts.$font01;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    &-b {
+      font-weight: 600;
+    }
+  }
+  &Medium {
+    color: var(--primary, #0c0c0b);
+
+    /* Body/Body Medium/Regular */
+    font-family: fonts.$font01;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    &-b {
+      font-weight: 600;
+    }
+  }
+  &Small {
+    color: var(--primary, #0c0c0b);
+
+    /* Body/Body Small/Regular */
+    font-family: fonts.$font01;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 15.6px */
+    &-b {
+      font-weight: 600;
+    }
+  }
+}
+
+.overline {
+  color: #6d7583;
+
+  /* Overline/Overline */
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 16px */
+}
+
+// Display 1
+@mixin th-display01-xlight {
+  font-size: 3rem;
+  font-family: fonts.$font03;
+  font-weight: 200;
+  line-height: calc(1.3 * 3rem);
+}
+
+// Display 2
+@mixin th-display02-xlight {
+  font-size: 2.5rem;
+  font-family: fonts.$font03;
+  font-weight: 200;
+  line-height: calc(1.3 * 2.5rem);
+}
+
+// Heading 1
+@mixin th-heading01 {
+  font-size: 2.75rem;
+  font-family: fonts.$font03;
+  font-weight: 900;
+  line-height: calc(1.3 * 2.75rem);
+}
+
+// Heading 2
+@mixin th-heading02 {
+  font-size: 2.25rem;
+  font-family: fonts.$font03;
+  font-weight: 900;
+  line-height: calc(1.3 * 2.25rem);
+}
+
+// Heading 3
+@mixin th-heading03 {
+  font-size: 1.75rem;
+  font-family: fonts.$font03;
+  font-weight: 900;
+  line-height: calc(1.3 * 1.75rem);
+}
+
+// Heading 4
+@mixin th-heading04 {
+  font-size: 1.5rem;
+  font-family: fonts.$font03;
+  font-weight: 700;
+  line-height: calc(1.3 * 1.5rem);
+}
+
+// Heading 5
+@mixin th-heading05 {
+  font-size: 1.25rem;
+  font-family: fonts.$font03;
+  font-weight: 700;
+  line-height: calc(1.3 * 1.25rem);
+}
+
+// Heading 6
+@mixin th-heading06 {
+  font-size: 1rem;
+  font-family: fonts.$font03;
+  font-weight: 700;
+  line-height: calc(1.3 * 1rem);
+}
+
+// Heading 7
+@mixin th-heading07 {
+  font-size: 0.875rem;
+  font-family: fonts.$font03;
+  font-weight: 700;
+  line-height: calc(1.7 * 0.875rem);
+}
+
+// Heading 8
+@mixin th-heading08 {
+  font-size: 0.75rem;
+  font-family: fonts.$font01;
+  font-weight: 700;
+  line-height: calc(1.7 * 0.75rem);
+}
+
+// Lead Paragraph
+@mixin th-lead-paragraph {
+  font-size: 1.375rem;
+  font-family: fonts.$font01;
+  font-weight: 400;
+  line-height: calc(1.5 * 1.375rem);
+}
+
+// Body Large
+@mixin th-body {
+  font-size: 1.25rem;
+  font-family: fonts.$font01;
+  font-weight: 500;
+  line-height: calc(1.3 * 1.25rem);
+}
+
+// Body Medium
+@mixin th-body-md {
+  font-size: 1.125rem;
+  font-family: fonts.$font01;
+  font-weight: 400;
+  line-height: calc(1.7 * 1.125rem);
+}
+
+// Body Normal
+@mixin th-body-nm {
+  font-size: 1rem;
+  font-family: fonts.$font01;
+  font-weight: 400;
+  line-height: 1.7rem;
+}
+
+// Body Small
+@mixin th-body-sm {
+  font-size: 0.875rem;
+  font-family: fonts.$font02;
+  font-weight: 400;
+  line-height: calc(1.7 * 0.875rem);
+}
+
+// Body XSmall
+@mixin th-body-xsm {
+  font-size: 0.75rem;
+  font-family: fonts.$font01;
+  font-weight: 400;
+  line-height: calc(1.7 * 0.75rem);
+}
+
+// Link Normal
+@mixin th-link-nm {
+  font-size: 1rem;
+  font-family: fonts.$font03;
+  font-weight: 600;
+  line-height: calc(1.7 * 1rem);
+  text-decoration: underline;
+}
+
+// Link Small
+@mixin th-link-sm {
+  font-size: 0.875rem;
+  font-family: fonts.$font01;
+  font-weight: 500;
+  line-height: calc(1.7 * 0.875rem);
+  text-decoration: underline;
+}
+
+// Link Extra Small
+@mixin th-link-xsm {
+  font-size: 0.75rem;
+  font-family: fonts.$font03;
+  font-weight: 600;
+  line-height: calc(1.7 * 0.75rem);
+  text-decoration: underline;
+}

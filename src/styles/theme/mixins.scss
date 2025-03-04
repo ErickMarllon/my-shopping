@@ -1,0 +1,25 @@
+@mixin gradient-border(
+  $radius: 32px,
+  $border-width: 1px,
+  $color-start: rgb(227, 227, 253),
+  $color-end: transparent
+) {
+  position: relative;
+  border-radius: $radius;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: $radius;
+    padding: $border-width;
+    background: linear-gradient(to bottom right, $color-start, $color-end);
+
+    -webkit-mask:
+      linear-gradient(white, white) content-box,
+      linear-gradient(white, white);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}

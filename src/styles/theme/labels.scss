@@ -1,0 +1,36 @@
+@import "fonts.scss";
+
+@mixin label-xsm {
+  font-size: 0.625rem;
+  font-family: fonts.$font03;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+@mixin label-sm {
+  font-size: 0.75rem;
+  font-family: fonts.$font01;
+  font-weight: 400;
+  line-height: 0.975rem;
+}
+
+@mixin label-nm {
+  font-size: 0.875rem;
+  font-family: fonts.$font01;
+  font-weight: 600;
+  line-height: 1.4875rem;
+}
+
+@mixin label-lg {
+  font-size: 1rem;
+  font-family: fonts.$font01;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+@mixin label-xlg {
+  font-size: 1.125rem;
+  font-family: fonts.$font01;
+  font-weight: 600;
+  line-height: 1.6875rem;
+}

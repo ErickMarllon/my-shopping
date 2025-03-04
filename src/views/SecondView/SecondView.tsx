@@ -2,13 +2,13 @@ import { Input } from "@/components";
 import "./styles.scss";
 import { useState } from "react";
 
-function FirstView() {
+function SecondView() {
   const [teste, setTeste] = useState<string>("");
   function handleSubmit() {
     console.log("foi");
   }
   return (
-    <div className="first-view-container">
+    <div className="second-view-container">
       <Input
         searchValue={teste}
         onSearchValue={setTeste}
@@ -28,8 +28,8 @@ function FirstView() {
         isToggle={true}
         closeAfterSubmit={true}
       />
-      <h1>FirstView Component</h1>
+      <h1>SecondView Component</h1>
     </div>
   );
 }
-export { FirstView };
+export { SecondView };

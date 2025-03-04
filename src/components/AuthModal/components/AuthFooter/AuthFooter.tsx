@@ -4,12 +4,13 @@ import { useFormContext } from "react-hook-form";
 import { IAuthModalFooterProps } from "../../types";
 import { AuthFormData } from "../AuthForm/authSchema";
 import "./styles.scss";
+import { useOrderLines } from "@/queries/useAuth/useAuth";
 
 function AuthFooter({ onActionType }: IAuthModalFooterProps) {
   const { handleSubmit } = useFormContext<AuthFormData>();
-
+  const { orderProcessingFinalize } = useOrderLines();
   function submit(data: AuthFormData) {
-    console.log("Dados do formulário:", data);
+    orderProcessingFinalize(data);
   }
 
   return (

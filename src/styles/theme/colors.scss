@@ -1,0 +1,64 @@
+$main: #001a70;
+$secondary: #9f2b2d;
+$tertiary: #ffd900;
+
+$error: #b21616;
+$error-dark: #a60000;
+$error-light: #fc5454;
+$error-lighter: #ff8080;
+
+$warning: #e5b800;
+$warning-dark: #d7ac00;
+$warning-light: #fddd48;
+$warning-lighter: #fef5a4;
+
+$info: #0063f7;
+$info-dark: #113366;
+$info-light: #5b8def;
+$info-lighter: #9dbff9;
+
+$success: #319800;
+$success-changePassword: #001a70;
+$success-dark: #2a7d03;
+$success-light: #39d98a;
+$success-lighter: #57eba1;
+
+$dark01: #171205;
+$dark02: #606062;
+$dark03: #cdcdcd;
+$dark04: #e0e0e0;
+
+$light01: #e4e4e3;
+$light02: #f8f8f8;
+$light03: #fffcf3;
+$light04: #ffffff;
+
+$theme-colors: (
+  "main": $main,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  "error": $error,
+  "error-dark": $error-dark,
+  "error-light": $error-light,
+  "error-lighter": $error-lighter,
+  "warning": $warning,
+  "warning-dark": $warning-dark,
+  "warning-light": $warning-light,
+  "warning-lighter": $warning-lighter,
+  "info": $info,
+  "info-dark": $info-dark,
+  "info-light": $info-light,
+  "info-lighter": $info-lighter,
+  "success": $success,
+  "success-dark": $success-dark,
+  "success-light": $success-light,
+  "success-lighter": $success-lighter,
+  "dark01": $dark01,
+  "dark02": $dark02,
+  "dark03": $dark03,
+  "dark04": $dark04,
+  "light01": $light01,
+  "light02": $light02,
+  "light03": $light03,
+  "light04": $light04,
+);

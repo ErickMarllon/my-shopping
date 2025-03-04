@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "engines": {
+    "node": ">= v18.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "start": "vite --mode dev",

@@ -1,0 +1,115 @@
+@import "fonts.scss";
+@import "colors.scss";
+@import "text-hierarchy.scss";
+@import "labels.scss";
+
+.container,
+.container-fluid,
+.col,
+.row,
+.vstack,
+.hstack {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.row > * {
+  margin: 0;
+  padding: 0;
+}
+
+.form-control {
+  @include text-hierarchy.th-body-nm;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid colors.$dark02;
+  border-radius: 0;
+  padding: 0 0 0.25rem 0;
+
+  &:focus {
+    box-shadow: none;
+    background-color: inherit;
+    border-color: inherit;
+  }
+
+  &.is-invalid,
+  &.is-valid {
+    box-shadow: none;
+    padding-right: 0;
+    background-position: right 4px;
+
+    &:focus {
+      box-shadow: none;
+      border-width: 1px;
+    }
+  }
+
+  &.is-valid {
+    background-image: none;
+    border-bottom-color: colors.$main;
+  }
+
+  &.is-invalid {
+    background-image: none;
+  }
+
+  &.is-valid:focus {
+    border-color: colors.$main;
+  }
+
+  &::placeholder {
+    @include text-hierarchy.th-body-nm;
+    color: colors.$dark02;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: colors.$dark03;
+    border-bottom-color: colors.$dark03;
+
+    &::placeholder {
+      color: colors.$dark03;
+    }
+  }
+}
+
+.form-label {
+  @include labels.label-sm;
+  margin-bottom: 0;
+}
+
+.valid-feedback,
+.invalid-feedback {
+  @include labels.label-sm;
+  text-align: start;
+}
+
+.valid-feedback {
+  color: colors.$dark02;
+}
+
+.invalid-feedback {
+  color: colors.$error;
+}
+
+.form-select {
+  @include text-hierarchy.th-body-nm;
+  background-color: transparent;
+
+  &:focus {
+    box-shadow: none;
+    border-color: inherit;
+    background-color: inherit;
+  }
+}
+
+.btn {
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.show > .btn-primary.dropdown-toggle {
+  color: inherit;
+}
