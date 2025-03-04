@@ -2,7 +2,6 @@ import * as MaterialIcons from "@mui/icons-material";
 import React from "react";
 import "./styles.scss";
 import { IconProps } from "./types";
-
 function Icon({ name, type = "default", size, ...rest }: IconProps) {
   const IconComponent = MaterialIcons[name] as React.ElementType;
 
