@@ -68,15 +68,15 @@ export default [
           },
         },
       ],
-      "no-restricted-syntax": [
-        "error",
-        {
-          selector:
-            "VariableDeclaration[kind='const'] > VariableDeclarator > ArrowFunctionExpression",
-          message:
-            "Não é permitido usar 'const' para definir funções. Use 'function' em PascalCase.",
-        },
-      ],
+      //   "no-restricted-syntax": [
+      //     "error",
+      //     {
+      //       selector:
+      //         "VariableDeclaration[kind='const'] > VariableDeclarator > ArrowFunctionExpression",
+      //       message:
+      //         "Não é permitido usar 'const' para definir funções. Use 'function' em PascalCase.",
+      //     },
+      //   ],
 
       "@typescript-eslint/naming-convention": [
         "error",
