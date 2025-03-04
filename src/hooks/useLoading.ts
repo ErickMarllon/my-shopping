@@ -1,5 +1,5 @@
-const useLoading = () => {
+function useLoading() {
   return null;
-};
+}
 
-export default useLoading;
+export { useLoading };
