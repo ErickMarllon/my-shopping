@@ -49,25 +49,25 @@ export default function (plop) {
         actions.push({
           type: "add",
           path: `${basePath}/{{pascalCase name}}.tsx`,
-          templateFile: "plop-templates/component.hbs",
+          templateFile: "templates/component.hbs",
         });
 
         actions.push({
           type: "add",
           path: `${basePath}/types.ts`,
-          templateFile: "plop-templates/types.hbs",
+          templateFile: "templates/types.hbs",
         });
 
         actions.push({
           type: "add",
           path: `${basePath}/styles.scss`,
-          templateFile: "plop-templates/styles.hbs",
+          templateFile: "templates/styles.hbs",
         });
 
         actions.push({
           type: "add",
           path: `${basePath}/index.ts`,
-          templateFile: "plop-templates/index.hbs",
+          templateFile: "templates/index.hbs",
         });
       }
 

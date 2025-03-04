@@ -10,6 +10,7 @@ const envSchema = z.object({
   VITE_API_URL: z.string().url(),
   VITE_API_URL_PREFIX: z.string(),
   VITE_APP_USE_MOCK: z.string().transform((str) => str === "true"),
+  VITE_ENCRYPTION_SECRET_KEY: z.string(),
 });
 
 export type EnvVars = z.infer<typeof envSchema>;
@@ -57,6 +58,7 @@ export default defineConfig(({ command, mode }) => {
   return {
     envDir: "./env",
     plugins: [react()],
+
     server: { port: PORT },
     base: handleViteBase(),
     resolve: {

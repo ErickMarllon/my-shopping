@@ -3,4 +3,4 @@ dist/
 build/
 package-lock.json
 yarn.lock
-plop-templates
+templates
