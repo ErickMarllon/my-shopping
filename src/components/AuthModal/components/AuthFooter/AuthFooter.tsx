@@ -1,10 +1,10 @@
 import { AppleIcon } from "@/assets/svg/apple-icon";
 import { GoogleIcon } from "@/assets/svg/google-icon";
+import { useOrderLines } from "@/queries/useAuth/useAuth";
 import { useFormContext } from "react-hook-form";
 import { IAuthModalFooterProps } from "../../types";
 import { AuthFormData } from "../AuthForm/authSchema";
 import "./styles.scss";
-import { useOrderLines } from "@/queries/useAuth/useAuth";
 
 function AuthFooter({ onActionType }: IAuthModalFooterProps) {
   const { handleSubmit } = useFormContext<AuthFormData>();

@@ -8,7 +8,7 @@ export interface IModulesValues {
   link: string;
   nm_module: string;
   key: string;
-  is_external: boolean;  
+  is_external: boolean;
 }
 
 export interface ISideBarModuleState {
