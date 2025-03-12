@@ -1,0 +1,16 @@
+export const routes = [
+  "/users",
+  "/users/new",
+  "/users/edit/:id/:orgId",
+  "/profiles",
+  "/profiles/new",
+  "/profiles/edit/:id",
+  "/solutions",
+  "/solutions/new",
+  "/solutions/edit/:id",
+  "/organizations",
+  "/organizations/new",
+  "/organizations/edit/:id",
+  "/organizations/centers/:id",
+  "/organizations/departments/:id",
+];
