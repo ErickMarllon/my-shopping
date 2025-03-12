@@ -1,9 +1,9 @@
 import axios, { AxiosError } from "axios";
 import { LocalStorageService } from "../localStorageService";
-import { ITokens } from "../localStorageService/types";
 import { ICreateSessionParams } from "../authService/types";
 import { AppError } from "@/errors/appError/AppError";
 import { AuthService } from "../authService";
+import { ITokens } from "@/types";
 
 const apiAuth = axios.create({
   baseURL: `${import.meta.env.VITE_API_URL}/auth`,
