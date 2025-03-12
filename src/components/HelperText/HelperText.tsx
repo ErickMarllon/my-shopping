@@ -8,6 +8,7 @@ function HelperText({
   isActive = false,
 }: IHelperTextProps) {
   if (!isActive) return;
+
   return (
     <div className="helper-text-container">
       <span className={`text-message ${type}`}>{message}</span>
