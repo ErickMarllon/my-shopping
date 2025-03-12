@@ -5,35 +5,29 @@ import {
   CssBaseline,
   ThemeProvider as MuiThemeProvider,
   PaletteMode,
-  useColorScheme,
 } from "@mui/material";
-import { useCallback, useMemo } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { ThemeContext } from "./ThemeContext";
 import { ThemeTypes } from "./types";
 
 function ThemeProvider({ children }: IChildren) {
-  const colorSchema = useColorScheme();
-  const theme = useMemo(
-    () => createAppTheme((colorSchema.mode as PaletteMode) ?? "dark"),
-    [colorSchema]
-  );
+  const [mode, setMode] = useState<PaletteMode>("dark");
 
   const toggleColorMode = useCallback(() => {
     const newMode =
-      colorSchema.mode !== ThemeTypes.LIGHT
-        ? ThemeTypes.DARK
-        : ThemeTypes.LIGHT;
-
-    colorSchema.setMode(newMode);
+      mode === ThemeTypes.LIGHT ? ThemeTypes.DARK : ThemeTypes.LIGHT;
+    setMode(newMode);
     localStorage.setItem(KEYS.THEME, newMode);
-  }, [colorSchema]);
+  }, [mode]);
 
+  const theme = useMemo(() => createAppTheme(mode), [mode]);
   const contextValue = useMemo(
     () => ({
-      ...colorSchema,
+      mode,
+      setMode,
       toggleColorMode,
     }),
-    [colorSchema, toggleColorMode]
+    [mode, setMode, toggleColorMode]
   );
   return (
     <ThemeContext.Provider value={contextValue}>

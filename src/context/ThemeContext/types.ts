@@ -1,4 +1,4 @@
-import { useColorScheme } from "@mui/material";
+import { PaletteMode } from "@mui/material";
 
 export enum ThemeTypes {
   DARK = "dark",
@@ -6,6 +6,8 @@ export enum ThemeTypes {
   SYSTEM = "system",
 }
 
-export interface IThemeContextProps extends ReturnType<typeof useColorScheme> {
+export interface IThemeContextProps {
+  setMode: React.Dispatch<React.SetStateAction<PaletteMode>>;
+  mode: PaletteMode;
   toggleColorMode: () => void;
 }
